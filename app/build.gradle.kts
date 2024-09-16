@@ -53,8 +53,10 @@ android {
 val room_version = "2.6.1"
 
 dependencies {
-    implementation(libs.androidx.room.runtime)
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version") // Corrutinas con Room
     kapt("androidx.room:room-compiler:$room_version")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
